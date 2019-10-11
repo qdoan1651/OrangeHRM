@@ -59,6 +59,6 @@ class HomePage(BasePage):
         assert ele.text == 'Define Timesheet Period'
         
     def click_recruitment_tab(self):
-        super().wait_for_visibility_of_element(self.recruitment_tabs).click()
+        super().wait_for_visibility_of_element(self.recruitment_tab_loc).click()
         ele = super().wait_for_visibility_of_element(self.candidates_tab_loc)
         assert ele.text == 'Candidates'
