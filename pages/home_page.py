@@ -22,3 +22,5 @@ class HomePage(BasePage):
     def logout(self):
         self.click_welcome()
         self.click_lougout()
+        
+    

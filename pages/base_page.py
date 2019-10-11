@@ -3,7 +3,6 @@
 https://github.com/qdoan1651/OrangeHRM/pages/base_page.py
 - Base class for all pages
 '''
-from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -76,12 +75,3 @@ class BasePage:
         """
         return self.wait.until(EC.presence_of_all_elements_located(by_loc))
     
-    
-if __name__ == '__main__':
-    driver = webdriver.Chrome('D:/Workspace/Tools/drivers/chromedriver.v.77.exe')
-    driver.set_window_size(1600, 900)
-    
-    base_page = BasePage(driver)
-    base_page.go_to('https://amazon.com')
-    print(base_page.get_page_title())
-    print(base_page.get_page_url())
